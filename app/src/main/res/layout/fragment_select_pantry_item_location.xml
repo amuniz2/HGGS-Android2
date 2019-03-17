@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_store"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_select_store_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_weight = "0"
+            android:text="@string/select_store_label" />
+
+        <Spinner
+            android:id="@+id/stores_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight = "1"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:contentDescription="@string/edit_list_of_stores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_stores_button"
+            android:src="@drawable/ic_edit_locations"
+            android:layout_marginStart="16dp"
+            android:layout_weight = "0"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_aisle"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_store">
+
+        <TextView
+            android:id="@+id/tv_select_aisle_label"
+            android:layout_weight = "0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/select_aisle_label" />
+
+        <Spinner
+            android:id="@+id/spinner_aisles"
+            android:layout_weight = "1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+        <ImageButton
+            android:contentDescription="@string/edit_list_of_aisles_in_store"
+            android:layout_weight = "0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_aisles_button"
+            android:src="@drawable/ic_edit_locations"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_section"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_aisle">
+
+    <TextView
+        android:id="@+id/tv_select_section_label"
+        android:layout_weight = "0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/select_section_label"
+    />
+
+    <Spinner
+        android:id="@+id/spinner_sections"
+        android:layout_weight = "1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <ImageButton
+        android:contentDescription="@string/edit_list_of_sections_in_store"
+        android:layout_weight = "0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_sections_button"
+        android:src="@drawable/ic_edit_locations"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_section">
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Cancel" />
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:id="@+id/ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="OK" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
